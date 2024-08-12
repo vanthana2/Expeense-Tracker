@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Expense Tracker</h1>
+            <div class="balance-overview">
+                <h2>Balance: ₹<span id="balance">12560.00</span></h2>
+                <div class="chart">
+                    <canvas id="expenseChart"></canvas>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="add-expense">
+                <h2>Add New Expense</h2>
+                <form id="expense-form">
+                    <input type="text" id="expense-name" placeholder="Expense Name">
+                    <input type="number" id="expense-amount" placeholder="Amount">
+                    <button type="submit">Add Expense</button>
+                </form>
+            </section>
+            <section class="expenses">
+                <h2>Expenses</h2>
+                <ul id="expense-list"></ul>
+            </section>
+            <section class="reminder">
+                <h2>Remainder</h2>
+                <form id="reminder-form">
+                    <input type="date" id="reminder-date" placeholder="Reminder Date">
+                    <input type="text" id="reminder-description" placeholder="Description">
+                    <button type="submit">Add Reminder</button>
+                </form>
+                <ul id="reminder-list"></ul>
+            </section>
+            <section class="statistics">
+                <h2>Statistics</h2>
+                <div class="statistics-content">
+                    <canvas id="statisticsChart"></canvas>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="#balance-overview">Balance</a></li>
+                    <li><a href="#add-expense">Add Expense</a></li>
+                    <li><a href="#expenses">Expenses</a></li>
+                    <li><a href="#reminder">Reminder</a></li>
+                    <li><a href="#statistics">Statistics</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
